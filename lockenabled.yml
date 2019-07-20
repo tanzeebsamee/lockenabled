@@ -1,0 +1,8 @@
+---
+- hosts: all
+  sudo: yes
+  tasks:
+    - name: Installing Avro jeyboard
+      command: "{{ item }}"
+      with_items :
+       - gsettings set org.gnome.desktop.screensaver lock-enabled true
